@@ -28,4 +28,8 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/tailwindcss-basics', function() {
+    return Inertia::render('TWBasics');
+})->middleware(['auth', 'verified'])->name('basics');
+
 require __DIR__.'/auth.php';
